@@ -13,7 +13,7 @@ export default class Login extends Component {
     handleSignIn = async () => {
         // making a request to our signin route on our API and checking with the data on our server
         const signIn = await request.post(`https://guarded-lake-55222.herokuapp.com/api/auth/signin`, {
-            email: this.state.usernameSignIn,
+            username: this.state.usernameSignIn,
             password: this.state.passwordSignIn,
         })
         // setting the user object into local storage to so we can navigate to other pages after we log in 
@@ -24,7 +24,7 @@ export default class Login extends Component {
     
     handleSignUp = async () => {
         const signUp = await request.post(`https://guarded-lake-55222.herokuapp.com/api/auth/signup`, {
-            email: this.state.usernameSignUp,
+            username: this.state.usernameSignUp,
             password: this.state.passwordSignUp,
         })
 
@@ -37,7 +37,7 @@ export default class Login extends Component {
     render() {
         return (
             // all of these inputs are going to set state to our inputted values and then run our handleSignUp and handleSignIn methods
-            <div>Email* 
+            <div>Username* 
                 <input value={ this.state.usernameSignUp} onChange={(e) => this.setState({ usernameSignUp: e.target.value})} />
                 Password*
                 <input value={ this.state.passwordSignUp} onChange={(e) => this.setState({ passwordSignUp: e.target.value})} />
@@ -45,7 +45,7 @@ export default class Login extends Component {
                 <button onClick={ this.handleSignUp }>Sign up</button>  
         
                 <br />
-                Email*
+                Username*
                 <input value={ this.state.usernameSignIn} onChange={(e) => this.setState({ usernameSignIn: e.target.value})} />
                 Password*
                 <input value={ this.state.passwordSignIn} onChange={(e) => this.setState({ passwordSignIn: e.target.value})} />
