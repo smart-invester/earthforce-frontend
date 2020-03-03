@@ -22,7 +22,7 @@ export default class Search extends Component {
 
     render() {
         return (
-            <div>
+            <div className='App'>
                 <form>
                 <input type = "date" min= "1995-06-20" max="2020-03-01" value={this.state.input} onChange={(e) => this.setState({ input: e.target.value })} />
                 </form>
