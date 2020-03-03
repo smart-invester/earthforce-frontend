@@ -9,6 +9,17 @@ import {
 import Search from './Search';
 import Login from './Login';
 import './App.css';
+import GoogleMap from './GoogleMap';
+
+
+
+function App() {
+  return (
+    <div className="App">
+      <GoogleMap/>
+      <Search/>
+    </div>
+  );
 
 
 export default class App extends Component {
@@ -27,5 +38,6 @@ export default class App extends Component {
       </Router>
     )
   }
+
 }
 
