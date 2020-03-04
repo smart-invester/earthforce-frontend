@@ -3,6 +3,7 @@ import {
   Route, 
   Switch,
   Link,
+
   BrowserRouter as Router 
 } from 'react-router-dom';
 import Home from './Home.js';
@@ -12,10 +13,10 @@ import About from './About.js';
 import Header from './Header.js';
 import './App.css';
 
-
 export default class App extends Component {
   render() {
     return (
+      <div>
       <Router>
        <Header />
         <Switch>
@@ -25,8 +26,8 @@ export default class App extends Component {
           <Route exact path='/login' component={Login} />
         </Switch>
       </Router>
+      </div>
     )
   }
-
 }
 
