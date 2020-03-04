@@ -31,6 +31,7 @@ export default class Header extends Component {
       <Link to="/favorites">
         Favorites
       </Link>
+    
       <Link to="/about">
         About
       </Link>
