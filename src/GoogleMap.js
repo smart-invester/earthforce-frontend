@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import './App.css'; 
 require('dotenv').config();
 
 class GoogleMap extends Component {
@@ -12,23 +13,21 @@ class GoogleMap extends Component {
         
         return (
             <div>
-                 <Map google={this.props.google} zoom={14} style ={style} initialCenter={{lat: 45.5051, lng: -122.675}}>
+                 <Map google={this.props.google} zoom={2} style ={style} initialCenter={{lat: 45.5051, lng: -122.675}}>
                     { 
                         coordinates.map(coordinate => (
 
-                            <Marker title={'Angela is right here!!!'} name={'Angela'} position={{lat: coordinate[0], lng: coordinate[1]}} icon={{
-                            url: "/wildfire.png",
+                            <Marker className = 'event-sign' title={'Angela is right here!!!'} name={'Angela'} position={{lat: coordinate[1], lng: coordinate[0]}} icon={{
+                            url: "/wildfire.png",  scaledSize: new window.google.maps.Size(50, 50)
                             }}/>
-
                         ))
-
                     }
 
-                    <InfoWindow onClose={this.onInfoWindowClose}>
+                    {/* <InfoWindow position={{lat: coordinate[0], lng: coordinate[1]}} onClose={this.onInfoWindowClose}>
                         <div>
                         hiiiiiiiiiiiiiiiii
                         </div>
-                    </InfoWindow>
+                    </InfoWindow> */}
                 </Map>
             </div>
         )
