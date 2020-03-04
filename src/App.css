@@ -10,11 +10,8 @@
   font-size: 24px;
 }
 
-.Map-div {
-  max-width: 50%;
-  height: auto;
-  color: blue;
-  border: 1px solid green;
-  
+.event-sign{
+  height: 10px;
+  width: 10px;
 }
 

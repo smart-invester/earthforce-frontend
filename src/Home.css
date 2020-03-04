@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 video#bgvideo {
     min-width: 100%;
     min-height: 100%;
     bottom: 0;
     right: 0;
     z-index: 1;
-
     padding: none;
     position: fixed;
 }
@@ -16,12 +14,11 @@ video#bgvideo {
     bottom: 50%;
     left: 25%;
     right: 25%;
-    color: #f1f1f1;
+    color: #F1F1F1;
     width: 50%;
     padding: 20px;
     text-align: center;
   }
-
   /* Style the button used to pause/play the video */
   button {
     width: 150px;
@@ -38,13 +35,11 @@ video#bgvideo {
     background: #ddd;
     color: black;
   }
-
 h1 {
     font-size: 64px;
     font-family: 'Roboto', san-serif;
     letter-spacing: .6em;
 }
-
 h3 {
     font-size: 16px;
     font-family: sans-serif;
@@ -54,18 +49,15 @@ h3 {
     text-transform: uppercase;
     margin-bottom: 50px;
     }
-
 .header {
     background: black;
     height: 80px;
     width: 100vw;
     padding-top: 10px;
     color: white;
-    position: fixed;
     opacity: .75;
     z-index: 2;
     display: flex;
-    ;;
 }
 .login+input {
     height: 20px;

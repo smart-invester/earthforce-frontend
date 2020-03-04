@@ -31,8 +31,12 @@ export default class Header extends Component {
       <Link to="/favorites">
         Favorites
       </Link>
+    
       <Link to="/about">
         About
+      </Link>
+      <Link to="/search">
+        Search
       </Link>
       </nav>
       <div className="login">Username
