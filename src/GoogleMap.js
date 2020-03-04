@@ -36,6 +36,7 @@ class GoogleMap extends Component {
             width: '70%',
             height: '70%',
             margin: 'auto'
+
         }
 
         return (
