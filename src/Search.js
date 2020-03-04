@@ -8,12 +8,16 @@ export default class Search extends Component {
         favorites: [],
         input: '',
         coordinates: [],
+        select: 8,
     }
-
+    handleSelect = (e) => {
+        this.setState({select:e.target.value})
+    }
     handleSearch = async (e) => {
         e.preventDefault();
-        const data = await request.get(`https://guarded-lake-55222.herokuapp.com/api/nasa?search=${this.state.input}`)
-    
+        const data = await request.get(`https://guarded-lake-55222.herokuapp.com/api/categories/${this.state.select}`)
+        console.log(data);
+        console.log(this.state.select, 'select======')
         //Map through events and return an array of geometries.  
         const coordinates = data.body.events.map(event => {
             return event.geometries[0].coordinates
@@ -31,8 +35,8 @@ export default class Search extends Component {
         return (
             <div className='App'>
                 <form>
-                <select id="events" name="events">
-                    <option value= '8'>wildfire</option>
+                <select onChange= {this.handleSelect}id="events" name="events">
+                    <option value='8'>wildfire</option>
                     <option value='10'>storm</option>
                     <option value='12'>volcanoes</option>
                 </select>
