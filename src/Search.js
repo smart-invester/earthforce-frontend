@@ -24,8 +24,20 @@ export default class Search extends Component {
         })
         this.setState({
             coordinates: coordinates,
+            allEvents: data.body.events,
         });
     }
+
+    makeFavorite = async (pin) => {
+        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com//api/me/favorites', {
+            name: pin.name
+
+        })
+        .set('Authorization', this.props.user.token)
+    }
+
+
+
 
     render() {
         return (
@@ -39,7 +51,8 @@ export default class Search extends Component {
                     <button onClick={this.handleSearch}>Search!</button>
                 </form>  
                 <div>
-                    <GoogleMap coordinates={this.state.coordinates}/>
+                    {this.state.allEvents && <GoogleMap coordinates={this.state.coordinates}
+                    allEvents={this.state.allEvents}/>}
                 </div>
             </div>
         )
