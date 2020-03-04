@@ -35,11 +35,9 @@ class GoogleMap extends Component {
             border: '5px solid black',
             width: '70%',
             height: '70%',
-            margin: '0 auto'
+            margin: 'auto'
         }
 
-
-        
         return (
             <div>
                  <Map  onClick={this.onMapClicked} 
