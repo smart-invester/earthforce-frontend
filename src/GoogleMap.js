@@ -5,14 +5,20 @@ require('dotenv').config();
 class GoogleMap extends Component {
     render() {
         const style = {
-            width: '100%',
-            height: '100%'
+            border: '5px solid black',
+            width: '70%',
+            height: '70%',
+            margin: '0 auto'
+            
+
+            
+
         }
         const { coordinates } = this.props;
         
         return (
             <div>
-                 <Map google={this.props.google} zoom={14} style ={style} initialCenter={{lat: 45.5051, lng: -122.675}}>
+                 <Map  google={this.props.google} zoom={14} style ={style} initialCenter={{lat: 45.5051, lng: -122.675}}>
                     { 
                         coordinates.map(coordinate => (
 
