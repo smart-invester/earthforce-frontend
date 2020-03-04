@@ -5,6 +5,7 @@ video#bgvideo {
     min-height: 100%;
     bottom: 0;
     right: 0;
+    z-index: 1;
     padding: none;
     position: fixed;
 }
@@ -57,5 +58,47 @@ h3 {
 
 .header {
     background: black;
+    height: 80px;
+    width: 100vw;
+    padding-top: 10px;
+    color: white;
+    position: fixed;
+    opacity: .75;
+    z-index: 2;
+    display: flex;
+    ;;
     
+}
+
+.login+input {
+    height: 20px;
+    text-decoration: none;
+    margin: 10px;
+    
+}
+
+input {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.loginbtn {
+    background-color: white;
+    color: black;
+    width: 100px;
+    border-radius: 70%;
+}
+
+.loginbtn:hover {
+    background-color: lightblue;
+    color: black;
+    width: 100px;
+    border-radius: 70%;
+}
+
+.nav {
+    color: white;
+    text-decoration: none;
+    margin: 50px;
 }

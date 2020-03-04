@@ -21,18 +21,11 @@ export default class App extends Component {
 
 
     return (
-
+      <div>
       <Router>
-        <Header>
-        <div id="nav">
-        <Link to='/search/cool'>Look around</Link>
-        <Link to='/login'>Sign In </Link>
-        <Link to='/map'>Look for Disasters! </Link>
-        <Link t0='/home'>Home</Link>
-        </div>
-        </Header>
-
-
+        
+        <Header />
+        
         <Switch>
           <Route path='/' component={Home} />
           <Route exact path='/search/cool' component={Search} />
@@ -40,8 +33,9 @@ export default class App extends Component {
           <Route exact path='/map' component={GoogleMap} />
         </Switch>
 
-
+     
       </Router>
+      </div>
     )
   }
 }
