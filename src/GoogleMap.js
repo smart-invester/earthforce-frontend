@@ -46,11 +46,10 @@ class GoogleMap extends Component {
             border: '5px solid black',
             width: '70%',
             height: '70%',
-            margin: '0 auto'
+            margin: 'auto'
+
         }
 
-
-        
         return (
             <div>
                  <Map  onClick={this.onMapClicked} 
@@ -78,10 +77,13 @@ class GoogleMap extends Component {
                         marker={this.state.activeMarker}
                         visible={this.state.showingInfoWindow}>
                         <div>
+
                        <button onClick={this.makeFavorite} >Add to Mavorites</button>
                        
-                            <h1>{this.state.selectedPlace.name}</h1>
+                            <h5>{this.state.selectedPlace.name}</h5>
+
                         </div>
+                        
                     </InfoWindow>
 
                 </Map>
