@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import GoogleMap from './GoogleMap';
 import request from 'superagent';
-import './App.css';
+import './search.css';
+import './header.css';
 
 export default class Search extends Component {
     state = { 

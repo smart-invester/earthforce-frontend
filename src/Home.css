@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 video#bgvideo {
     min-width: 100%;
     min-height: 100%;
     bottom: 0;
     right: 0;
-    z-index: 1;
     padding: none;
     position: fixed;
+    z-index: 0;
 }
+
   /* Add some content at the bottom of the video/page */
   .content {
     position: fixed;
-    bottom: 50%;
+    bottom: 40%;
     left: 25%;
     right: 25%;
     color: #F1F1F1;
@@ -20,28 +22,15 @@ video#bgvideo {
     text-align: center;
   }
   /* Style the button used to pause/play the video */
-  button {
-    width: 150px;
-    font-size: 16px;
-    padding: 5px;
-    margin: 10px;
-    border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 8%;
-  }
-  button:hover {
-    background: #ddd;
-    color: black;
-  }
+
 h1 {
     font-size: 64px;
     font-family: 'Roboto', san-serif;
     letter-spacing: .6em;
+    text-shadow: 2px 2px 23px #ffffff;
 }
 h3 {
-    font-size: 16px;
+    font-size: 20px;
     font-family: sans-serif;
     opacity: .8;
     letter-spacing: .2em;
@@ -49,39 +38,16 @@ h3 {
     text-transform: uppercase;
     margin-bottom: 50px;
     }
-.header {
-    background: black;
-    height: 80px;
-    width: 100vw;
-    padding-top: 10px;
-    color: white;
-    opacity: .75;
-    z-index: 2;
-    display: flex;
+
+.control-bar {
+    visibility: hidden;
 }
-.login+input {
-    height: 20px;
-    text-decoration: none;
-    margin: 10px;
+
+.signup {
+    margin-left: 10px;
+    display: inline-block;
+    color: #ccc7c7;
+    font-family: "Montserrat", sans-serif;
 }
-input {
-    margin-right: 20px;
-    margin-left: 20px;
-}
-.loginbtn {
-    background-color: white;
-    color: black;
-    width: 100px;
-    border-radius: 70%;
-}
-.loginbtn:hover {
-    background-color: lightblue;
-    color: black;
-    width: 100px;
-    border-radius: 70%;
-}
-.nav {
-    color: white;
-    text-decoration: none;
-    margin: 50px;
-}
+
+
