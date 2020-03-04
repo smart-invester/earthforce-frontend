@@ -66,8 +66,9 @@ class GoogleMap extends Component {
                         visible={this.state.showingInfoWindow}>
                        
                         <div>
-                            <h1>{this.state.selectedPlace.name}</h1>
+                            <h5>{this.state.selectedPlace.name}</h5>
                         </div>
+                        
                     </InfoWindow>
 
                 </Map>
