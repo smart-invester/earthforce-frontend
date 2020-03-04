@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import GoogleMap from './GoogleMap';
 import request from 'superagent';
+import './App.css';
 
 export default class Search extends Component {
     state = { 
@@ -28,7 +29,7 @@ export default class Search extends Component {
 
     render() {
         return (
-            <div className='App'>
+            <div>
                 <form>
                     <select onChange= {this.handleSelect}id="events" name="events">
                         <option value='8'>wildfire</option>
@@ -37,8 +38,9 @@ export default class Search extends Component {
                     </select>
                     <button onClick={this.handleSearch}>Search!</button>
                 </form>  
-                {/* We are conditionally rendering maps component only if(&&) the coordinates array has information(has a length) */}
-                {this.state.coordinates.length && <GoogleMap coordinates={this.state.coordinates}/>}
+                <div>
+                    <GoogleMap coordinates={this.state.coordinates}/>
+                </div>
             </div>
         )
     }

@@ -35,6 +35,9 @@ export default class Header extends Component {
       <Link to="/about">
         About
       </Link>
+      <Link to="/search">
+        Search
+      </Link>
       </nav>
       <div className="login">Username
                 <input value={ this.state.usernameSignIn} onChange={(e) => this.setState({ usernameSignIn: e.target.value})} />
