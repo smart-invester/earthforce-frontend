@@ -27,14 +27,19 @@ class GoogleMap extends Component {
                             <Marker className = 'event-sign' title={'Angela is right here!!!'} name={'Angela'} position={{lat: coordinate[1], lng: coordinate[0]}} icon={{
                             url: "/wildfire.png",  scaledSize: new window.google.maps.Size(50, 50)
                             }}/>
+                           
                         ))
-                    }
+                        
 
-                    {/* <InfoWindow position={{lat: coordinate[0], lng: coordinate[1]}} onClose={this.onInfoWindowClose}>
+
+
+                    }
+                    <InfoWindow onClose={this.onInfoWindowClose}>
                         <div>
                         hiiiiiiiiiiiiiiiii
                         </div>
-                    </InfoWindow> */}
+                    </InfoWindow>
+
                 </Map>
             </div>
         )
