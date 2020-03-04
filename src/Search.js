@@ -28,6 +28,17 @@ export default class Search extends Component {
         });
     }
 
+    makeFavorite = async (pin) => {
+        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com//api/me/favorites', {
+            name: pin.name
+
+        })
+        .set('Authorization', this.props.user.token)
+    }
+
+
+
+
     render() {
         return (
             <div>
