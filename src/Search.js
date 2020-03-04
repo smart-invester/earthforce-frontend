@@ -4,53 +4,41 @@ import request from 'superagent';
 
 export default class Search extends Component {
     state = { 
-        nasaObject: {},
         favorites: [],
         input: '',
         coordinates: [],
         select: 8,
     }
+
     handleSelect = (e) => {
-        this.setState({select:e.target.value})
+        this.setState({ select: e.target.value })
     }
+
     handleSearch = async (e) => {
         e.preventDefault();
         const data = await request.get(`https://guarded-lake-55222.herokuapp.com/api/categories/${this.state.select}`)
-        console.log(data);
-        console.log(this.state.select, 'select======')
         //Map through events and return an array of geometries.  
         const coordinates = data.body.events.map(event => {
             return event.geometries[0].coordinates
         })
-
-        // console.log('HEY NICK',coordinates)
-        // console.log(data.body.events)
         this.setState({
             coordinates: coordinates,
         });
     }
 
     render() {
-       
         return (
             <div className='App'>
                 <form>
-                <select onChange= {this.handleSelect}id="events" name="events">
-                    <option value='8'>wildfire</option>
-                    <option value='10'>storm</option>
-                    <option value='12'>volcanoes</option>
-                </select>
-                <button onClick={this.handleSearch}>Search!</button>
-                </form>
-                
-                <div> {this.state.nasaObject.title}</div>
-                <img className = "image" src= {this.state.nasaObject.url} alt="" />
-                <p>
-                    {this.state.nasaObject.explanation}
-                </p>    
+                    <select onChange= {this.handleSelect}id="events" name="events">
+                        <option value='8'>wildfire</option>
+                        <option value='10'>storm</option>
+                        <option value='12'>volcanoes</option>
+                    </select>
+                    <button onClick={this.handleSearch}>Search!</button>
+                </form>  
                 {/* We are conditionally rendering maps component only if(&&) the coordinates array has information(has a length) */}
                 {this.state.coordinates.length && <GoogleMap coordinates={this.state.coordinates}/>}
-
             </div>
         )
     }
