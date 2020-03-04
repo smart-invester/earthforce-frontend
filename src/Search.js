@@ -24,6 +24,7 @@ export default class Search extends Component {
         })
         this.setState({
             coordinates: coordinates,
+            allEvents: data.body.events,
         });
     }
 
@@ -39,7 +40,8 @@ export default class Search extends Component {
                     <button onClick={this.handleSearch}>Search!</button>
                 </form>  
                 <div>
-                    <GoogleMap coordinates={this.state.coordinates}/>
+                    {this.state.allEvents && <GoogleMap coordinates={this.state.coordinates}
+                    allEvents={this.state.allEvents}/>}
                 </div>
             </div>
         )
