@@ -28,7 +28,7 @@ export default class Search extends Component {
 
     render() {
         return (
-            <div className='App'>
+            <div>
                 <form>
                     <select onChange= {this.handleSelect}id="events" name="events">
                         <option value='8'>wildfire</option>
