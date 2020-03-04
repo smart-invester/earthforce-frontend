@@ -19,21 +19,26 @@ export default class Search extends Component {
             return event.geometries[0].coordinates
         })
 
-        console.log('HEY NICK',coordinates)
-        console.log(data.body.events)
+        // console.log('HEY NICK',coordinates)
+        // console.log(data.body.events)
         this.setState({
             coordinates: coordinates,
         });
     }
 
     render() {
-        console.log('HEY!!!',this.state.coordinates)
+       
         return (
             <div className='App'>
                 <form>
-                {/* <input type = "date" value={this.state.input} onChange={(e) => this.setState({ input: e.target.value })} /> */}
-                </form>
+                <select id="events" name="events">
+                    <option value= '8'>wildfire</option>
+                    <option value='10'>storm</option>
+                    <option value='12'>volcanoes</option>
+                </select>
                 <button onClick={this.handleSearch}>Search!</button>
+                </form>
+                
                 <div> {this.state.nasaObject.title}</div>
                 <img className = "image" src= {this.state.nasaObject.url} alt="" />
                 <p>
