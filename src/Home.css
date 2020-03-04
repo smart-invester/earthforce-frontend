@@ -55,7 +55,6 @@ h3 {
     width: 100vw;
     padding-top: 10px;
     color: white;
-    position: fixed;
     opacity: .75;
     z-index: 2;
     display: flex;
