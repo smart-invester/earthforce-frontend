@@ -18,7 +18,7 @@ class GoogleMap extends Component {
         
         return (
             <div>
-                 <Map  google={this.props.google} zoom={14} style ={style} initialCenter={{lat: 45.5051, lng: -122.675}}>
+                 <Map  google={this.props.google} zoom={3} style ={style} initialCenter={{lat: 45.5051, lng: -122.675}}>
                     { 
                         coordinates.map(coordinate => (
 
