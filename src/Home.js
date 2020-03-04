@@ -2,21 +2,25 @@ import React, { Component } from 'react'
 import './Home.css';
 import { Player } from 'video-react';
 import request from 'superagent';
+
 export default class Home extends Component {
     state = {
         usernameSignUp: '',
         passwordSignUp: '',
     }
+
     handleSignUp = async () => {
         const signUp = await request.post(`https://guarded-lake-55222.herokuapp.com/api/auth/signup`, {
             username: this.state.usernameSignUp,
             password: this.state.passwordSignUp,
         })
+
         localStorage.setItem('user', JSON.stringify(signUp.body));
         // this redirects the user after sign up
         // this.props.history.push('/');
     }
     render() {
+
         return (
             <div>
                 <Player>
@@ -35,27 +39,12 @@ export default class Home extends Component {
                 Password
                 <input value={ this.state.passwordSignUp} onChange={(e) => this.setState({ passwordSignUp: e.target.value})} />
                 <button onClick={ this.handleSignUp }>Sign up</button>
+
             </div>
                 </div>
             </div>
         )
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
