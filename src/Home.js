@@ -1,0 +1,74 @@
+import React, { Component } from 'react'
+import './Home.css';
+import { Player } from 'video-react';
+import request from 'superagent';
+
+export default class Home extends Component {
+
+    state = {
+        usernameSignIn: '',
+        usernameSignUp: '',
+        passwordSignIn: '',
+        passwordSignUp: '',
+    }
+
+    handleSignIn = async () => {
+        // making a request to our signin route on our API and checking with the data on our server
+        const signIn = await request.post(`https://guarded-lake-55222.herokuapp.com/api/auth/signin`, {
+            username: this.state.usernameSignIn,
+            password: this.state.passwordSignIn,
+        })
+        // setting the user object into local storage to so we can navigate to other pages after we log in 
+        localStorage.setItem('user', JSON.stringify(signIn.body));
+        // this redirects the user after sign in
+        this.props.history.push('/');
+    }
+    
+    handleSignUp = async () => {
+        const signUp = await request.post(`https://guarded-lake-55222.herokuapp.com/api/auth/signup`, {
+            username: this.state.usernameSignUp,
+            password: this.state.passwordSignUp,
+        })
+
+        localStorage.setItem('user', JSON.stringify(signUp.body));
+        // this redirects the user after sign up
+        this.props.history.push('/');
+    }
+    
+    render() {
+
+
+        return (
+            <div>
+                <Player>
+               <video id="bgvideo" loop autoPlay muted>
+                 <source src="https://ak6.picdn.net/shutterstock/videos/1036814996/preview/stock-footage-amazon-rainforest-fire-from-space-satellite-view-shows-a-lot-of-fires-burning-in-the-brazilian.webm" type="video/mp4" />
+                 <source src="https://ak6.picdn.net/shutterstock/videos/1036814996/preview/stock-footage-amazon-rainforest-fire-from-space-satellite-view-shows-a-lot-of-fires-burning-in-the-brazilian.webm" type="video/ogg" />
+                    Your browser does not support the video tag.
+                </video>
+                </Player>
+                <div class="content">
+                <h1>EARTH-FORCE</h1>
+                <h3>Outreach empowers you to create positive change for people and the planet with Geo tools.</h3>
+                <div className="login">Username
+                <input value={ this.state.usernameSignUp} onChange={(e) => this.setState({ usernameSignUp: e.target.value})} />
+                Password
+                <input value={ this.state.passwordSignUp} onChange={(e) => this.setState({ passwordSignUp: e.target.value})} />
+
+                <button onClick={ this.handleSignUp }>Sign up</button>  
+        
+                <div className="login"></div>
+                Username
+                <input value={ this.state.usernameSignIn} onChange={(e) => this.setState({ usernameSignIn: e.target.value})} />
+                Password
+                <input value={ this.state.passwordSignIn} onChange={(e) => this.setState({ passwordSignIn: e.target.value})} />
+
+                <button onClick={this.handleSignIn}>Sign in</button>
+            </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+
