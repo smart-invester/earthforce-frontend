@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
+import InfoWindow from './InfoWindowEx.js';
 import './App.css'; 
+import request from 'superagent';
 require('dotenv').config();
 
 class GoogleMap extends Component {
@@ -16,7 +18,8 @@ class GoogleMap extends Component {
         this.setState({
         selectedPlace: {name: props.event.title},
         activeMarker: marker,
-        showingInfoWindow: true
+        showingInfoWindow: true,
+        event: props.event
         });
     }
  
@@ -28,6 +31,14 @@ class GoogleMap extends Component {
         })
         }
     };
+
+
+    makeFavorite = async (pin) => {
+        console.log('make fav')
+        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com/api/me/favorites', this.state.event)
+        .set('Authorization', JSON.parse(localStorage.getItem('user')).token)
+
+    }
 
 
     render() {
@@ -66,8 +77,9 @@ class GoogleMap extends Component {
                         onClose={this.onInfoWindowClose}
                         marker={this.state.activeMarker}
                         visible={this.state.showingInfoWindow}>
-                       
                         <div>
+                       <button onClick={this.makeFavorite} >Add to Mavorites</button>
+                       
                             <h1>{this.state.selectedPlace.name}</h1>
                         </div>
                     </InfoWindow>
