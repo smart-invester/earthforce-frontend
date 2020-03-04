@@ -1,17 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 import './Home.css';
-
 import request from 'superagent';
-
-
 export default class Header extends Component {
-
     state = {
         usernameSignIn: '',
         passwordSignIn: '',
     }
-
     handleSignIn = async () => {
         // making a request to our signin route on our API and checking with the data on our server
         const signIn = await request.post(`https://guarded-lake-55222.herokuapp.com/api/auth/signin`, {
@@ -23,11 +18,8 @@ export default class Header extends Component {
         // this redirects the user after sign in
         // this.props.history.push('/');
     }
-
-
     render() {
         return (
-             
         <div className="header">
         <nav>
       <Link exact to="/">
@@ -43,17 +35,14 @@ export default class Header extends Component {
         About
       </Link>
       </nav>
-            
-
       <div className="login">Username
                 <input value={ this.state.usernameSignIn} onChange={(e) => this.setState({ usernameSignIn: e.target.value})} />
                 Password
                 <input value={ this.state.passwordSignIn} onChange={(e) => this.setState({ passwordSignIn: e.target.value})} />
-
                 <button className="loginbtn" onClick={this.handleSignIn}>Sign in</button>
             </div>
-                
     </div>
         )
     }
 }
+

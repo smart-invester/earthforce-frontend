@@ -4,7 +4,6 @@ import { Player } from 'video-react';
 import request from 'superagent';
 
 export default class Home extends Component {
-
     state = {
         usernameSignUp: '',
         passwordSignUp: '',
@@ -20,9 +19,7 @@ export default class Home extends Component {
         // this redirects the user after sign up
         // this.props.history.push('/');
     }
-    
     render() {
-
 
         return (
             <div>
@@ -36,16 +33,13 @@ export default class Home extends Component {
                 <div class="content">
                 <h1>EARTH-FORCE</h1>
                 <h3>Outreach empowers you to create positive change for people and the planet with Geo tools.</h3>
-                
                 <div className="signup">
                 Username
                 <input value={ this.state.usernameSignUp} onChange={(e) => this.setState({ usernameSignUp: e.target.value})} />
                 Password
                 <input value={ this.state.passwordSignUp} onChange={(e) => this.setState({ passwordSignUp: e.target.value})} />
+                <button onClick={ this.handleSignUp }>Sign up</button>
 
-                <button onClick={ this.handleSignUp }>Sign up</button>  
-        
-            
             </div>
                 </div>
             </div>

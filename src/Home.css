@@ -20,7 +20,7 @@ video#bgvideo {
     padding: 20px;
     text-align: center;
   }
-  
+
   /* Style the button used to pause/play the video */
   button {
     width: 150px;
@@ -33,7 +33,6 @@ video#bgvideo {
     cursor: pointer;
     border-radius: 8%;
   }
-  
   button:hover {
     background: #ddd;
     color: black;
@@ -43,7 +42,6 @@ h1 {
     font-size: 64px;
     font-family: 'Roboto', san-serif;
     letter-spacing: .6em;
-
 }
 
 h3 {
@@ -67,36 +65,28 @@ h3 {
     z-index: 2;
     display: flex;
     ;;
-    
 }
-
 .login+input {
     height: 20px;
     text-decoration: none;
     margin: 10px;
-    
 }
-
 input {
     margin-right: 20px;
     margin-left: 20px;
 }
-
-
 .loginbtn {
     background-color: white;
     color: black;
     width: 100px;
     border-radius: 70%;
 }
-
 .loginbtn:hover {
     background-color: lightblue;
     color: black;
     width: 100px;
     border-radius: 70%;
 }
-
 .nav {
     color: white;
     text-decoration: none;
