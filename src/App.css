@@ -1,12 +1,9 @@
-.image{
-  height:400px;
-  width: auto;
+body {
+  background-color: #24252A;
 }
 
-#nav {
-  margin: 10px;
-  color: white;
-  text-align: center;
-  font-size: 24px;
+.gm-style-iw {
+  color: blue;
+  height: 200px;
+  width: 300px;
 }
-

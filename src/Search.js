@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import GoogleMap from './GoogleMap';
 import request from 'superagent';
-import './App.css';
+import './search.css';
+import './header.css';
 
 export default class Search extends Component {
     state = { 
@@ -9,6 +10,7 @@ export default class Search extends Component {
         input: '',
         coordinates: [],
         select: 8,
+        allEvents: []
     }
 
     handleSelect = (e) => {
@@ -24,22 +26,39 @@ export default class Search extends Component {
         })
         this.setState({
             coordinates: coordinates,
+            allEvents: data.body.events,
         });
+    }
+
+    makeFavorite = async (pin) => {
+        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com//api/me/favorites', this.state.event )
+        .set('Authorization', this.props.user.token)
     }
 
     render() {
         return (
-            <div>
-                <form>
+            <div className="search-container">
+                <form id="search">
                     <select onChange= {this.handleSelect}id="events" name="events">
-                        <option value='8'>wildfire</option>
+                        <option value='8'>Wildfire</option>
                         <option value='10'>storm</option>
                         <option value='12'>volcanoes</option>
+                        <option value='6'>drought</option>
+                        <option value='7'>dust and haze</option>
+                        <option value='9'>floods</option>
+                        <option value='13'>water color</option>
+                        <option value='14'>landslides</option>
+                        <option value='15'>sea and lake ice</option>
+                        <option value='16'>earthquake</option>
+                        <option value='17'>snow</option>
+                        <option value='18'>temperature extremes</option>
+                        <option value='19'>manmade</option>
                     </select>
                     <button onClick={this.handleSearch}>Search!</button>
                 </form>  
                 <div>
-                    <GoogleMap coordinates={this.state.coordinates}/>
+                    {this.state.allEvents && <GoogleMap coordinates={this.state.coordinates}
+                    allEvents={this.state.allEvents}/>}
                 </div>
             </div>
         )
