@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+.DisasterTitle {
+    margin-bottom: 90px;
+    margin-top: 50px;
+}
+
+.title-container{
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-size: 64px;
+    font-family:'Roboto', san-serif;
+}
+
 h1 {
     font-size: 64px;
     font-family: 'Roboto', san-serif;
@@ -40,6 +52,10 @@ a.github {
 a.social:hover {
     transform: translateY(-2px);
 }
+
+.img-relief {
+    margin: 10 0;
+}
 .photo img {
     display: inline;
     height: 250px;
@@ -59,8 +75,8 @@ a.social:hover {
 .about-container {
     color: white;
     position: fixed;
-    top: 20%;
-    left: 15%;    
+    top: 34%;
+    left: 26%;    
 }
 
 .socialicons {
