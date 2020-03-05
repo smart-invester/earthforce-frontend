@@ -43,20 +43,20 @@ class GoogleMap extends Component {
 
 
     makeFavorite = async (props) => {
-        console.log('------hi :P', this.state.event)
+        const user = JSON.parse(localStorage.getItem('user'));
         const favorite = await request.post('https://guarded-lake-55222.herokuapp.com/api/me/favorites',{
             title: this.state.event.title,
             date: this.state.event.geometries[0].date
 
         } )
-        .set('Authorization', this.props.user.token)
+        .set('Authorization', user.token)
         
     }
     
     render() {
         const style = {
-            border: '5px solid black',
-            width: '70%',
+            border: '2px solid black',
+            width: '80%',
             height: '70%',
             margin: 'auto',
             top: '20%'
@@ -92,14 +92,14 @@ class GoogleMap extends Component {
                         <div>
 
 
-                       <button onClick={this.makeFavorite} >Add to Mavorites</button>
-                       
-                            <h5>NAME: {this.state.selectedPlace.name}</h5>
-                            <h5>DATE: {this.state.selectedPlace.date}</h5>
-                            <h5>LATITUDE: {this.state.selectedPlace.lat}</h5>
-                            <h5>LONGITUDE: {this.state.selectedPlace.lng}</h5>
-    
+                            <div className="infowindow">
+                            <h5>NAME:</h5> <h5 className="infowords"> {this.state.selectedPlace.name}</h5>
+                            <h5>DATE:</h5> <h5 className="infowords"> {this.state.selectedPlace.date}</h5>
+                            <h5>LATITUDE:</h5> <h5 className="infowords"> {this.state.selectedPlace.lat}</h5>
+                            <h5>LONGITUDE:</h5> <h5 className="infowords"> {this.state.selectedPlace.lng}</h5>
+                            </div>
                             
+                       <button id="track" onClick={this.makeFavorite}>Track This Natural Event</button>
 
                           
                         </div>

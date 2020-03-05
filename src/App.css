@@ -3,7 +3,22 @@ body {
 }
 
 .gm-style-iw {
-  color: blue;
-  height: 200px;
-  width: 300px;
+  color: #0088a9;
+  height: 300px;
+  width: 400px;
+}
+
+.infowindow {
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 1.3em;
+}
+
+.infowords {
+  color: black; 
+}
+
+#track {
+  text-align: center;
+  margin-left: 65px;
 }
