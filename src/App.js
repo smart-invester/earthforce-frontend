@@ -30,7 +30,7 @@ export default class App extends Component {
           <Route exact path='/' render={(props) => <Home {...props} setUser={ this.setUser } user={ this.state.user }/>}/>
           <Route exact path='/about' component={About} />
           <Route exact path='/relief' component={Relief} />
-          <Route exact path='/your-events' component={Favorites} />
+          <Route exact path='/your-events' render={(props) => <Favorites {...props} setUser={ this.setUser } user={ this.state.user } />}/>
           <Route exact path='/search' render={(props) => <Search {...props} setUser={ this.setUser } user={ this.state.user }/>} />
         </Switch>
       </Router>
