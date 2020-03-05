@@ -9,6 +9,7 @@ import Home from './Home.js';
 import Search from './Search';
 import About from './About.js';
 import Header from './Header.js';
+import Relief from './Relief.js';
 
 
 export default class App extends Component {
@@ -28,8 +29,8 @@ export default class App extends Component {
         <Switch>
           <Route exact path='/' render={(props) => <Home {...props} setUser={ this.setUser } user={ this.state.user }/>}/>
           <Route exact path='/about' component={About} />
+          <Route exact path='/relief' component={Relief} />
           <Route exact path='/search' render={(props) => <Search {...props} setUser={ this.setUser } user={ this.state.user }/>} />
-          {/* <Route exact path='/login' render={(props) => <Login {...props} setUser={ this.setUser } user={ this.state.user }/>} /> */}
         </Switch>
       </Router>
 
