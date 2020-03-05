@@ -11,6 +11,7 @@ export default class Header extends Component {
   }
   handleSignIn = async () => {
     // making a request to our signin route on our API and checking with the data on our server
+
     const signIn = await request.post(`https://guarded-lake-55222.herokuapp.com/api/auth/signin`, {
       username: this.state.usernameSignIn,
       password: this.state.passwordSignIn,
@@ -29,10 +30,9 @@ export default class Header extends Component {
           <ul className="nav__links" >
             <li><Link exact to="/">Home </Link></li>
             <li><Link to="/search">Search</Link></li>
-            <li><Link to="/favorites">Favorites</Link></li>
-            <li><Link to="/contribute">Contribute</Link></li>
-            <li><Link to="/about">About</Link></li>
             <li><Link to="/relief">Relief</Link></li>
+            <li><Link to="/your-events">Your Events</Link></li>
+            <li><Link to="/about">About</Link></li>
           </ul>
         </div>
 
