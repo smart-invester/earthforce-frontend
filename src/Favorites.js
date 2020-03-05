@@ -4,7 +4,7 @@ import './favorites.css'
 
 export default class Favorites extends Component {
     state = {
-        faves: {}
+        faves: []
     }
     
     
@@ -14,8 +14,8 @@ export default class Favorites extends Component {
          
         const faves = await request.get(`https://guarded-lake-55222.herokuapp.com/api/me/favorites`).set('Authorization', user.token);
 
-        const favorite = faves.body[0]
-        this.setState({ faves: favorite })
+        // const favorite = faves.body[0]
+        this.setState({ faves:faves.body })
         console.log(this.state.faves)
     }
 
@@ -33,9 +33,18 @@ export default class Favorites extends Component {
         
         return (
             <div>
-                
+                {
+                    this.state.faves.map(fave =>
+                    <div>    
+                        <img src='' alt =""/>
+                        <h4>{fave.title}</h4>
+                        <p>{fave.date}</p>
+                    </div>
+                      
+                        )
+                }
 
-                <h4> {this.state.faves.title} </h4>
+                {/* <h4> {this.state.faves.title} </h4> */}
                 <p></p>
                 
             </div>
