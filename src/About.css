@@ -5,7 +5,7 @@ h1 {
     font-family: 'Roboto', san-serif;
     letter-spacing: .6em;
     text-align: center;
-    margin-top: -30px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -17,13 +17,25 @@ h2 {
     margin-right: 20px;
 }
 p {
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Roboto', sans-serif;
     opacity: .8;
-    line-height: 2em;
+    line-height: 1.75em;
     text-align: center;
-    
- 
+    margin-top: 80px;
+    margin-left: 15%;
+    margin-right: 15%;  
+}
+h3 {
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    opacity: .8;
+    line-height: 1.75em;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: 15%;
+    margin-right: 15%;  
+    font-style: italic;
 }
 a.social {
     margin: 0 1rem;
@@ -45,14 +57,15 @@ a.social:hover {
     height: 250px;
     width: 250px;
     box-shadow: 0 4px 26px #ffffff;
-    border-radius: 30%;
+    border-radius: 50%;
     margin: 0 1rem;
+    margin-top: 25px;
 }
 
 .team-container {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 40px;
+    margin-top: 70px;
    
 }
 
@@ -60,7 +73,7 @@ a.social:hover {
     color: white;
     position: fixed;
     top: 20%;
-    left: 5%;    
+    left: 0%;    
 }
 
 .socialicons {
