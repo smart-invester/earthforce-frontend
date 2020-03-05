@@ -26,7 +26,7 @@ p {
     margin-left: 15%;
     margin-right: 15%;  
 }
-h3 {
+.Members {
     font-size: 22px;
     font-family: 'Roboto', sans-serif;
     opacity: .8;
@@ -36,6 +36,16 @@ h3 {
     margin-left: 15%;
     margin-right: 15%;  
     font-style: italic;
+}
+h3 {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    opacity: .8;
+    line-height: 2em;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
 }
 a.social {
     margin: 0 1rem;
