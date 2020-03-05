@@ -32,11 +32,11 @@ export default class Favorites extends Component {
     render() {
         
         return (
-            <div>
+            <div className="faves-container">
                 {
                     this.state.faves.map(fave =>
-                    <div>    
-                        <img src='' alt =""/>
+                    <div className="fave-card-div">    
+                        <img src='./hazard_160.png' alt =""/>
                         <h4>{fave.title}</h4>
                         <p>{fave.date}</p>
                     </div>
