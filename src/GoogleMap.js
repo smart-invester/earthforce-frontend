@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
-import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
+import React, { Component } from 'react'
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import InfoWindow from './InfoWindowEx.js';
-import './App.css'; 
+import './App.css';
 import request from 'superagent';
 require('dotenv').config();
 
@@ -11,7 +11,6 @@ class GoogleMap extends Component {
         showInfoWindow: false,
         activeMarker: {},
         selectedPlace: {},
-        // selectedAddInfo: {}, 
     }
 
     onMarkerClick = (props, marker, e) => {
@@ -23,19 +22,19 @@ class GoogleMap extends Component {
             lat: props.event.geometries[0].coordinates[1],
             lng: props.event.geometries[0].coordinates[0]
         },
-        // selectedAddInfo: {name: props.event.geometries},
+        
         activeMarker: marker,
         showingInfoWindow: true,
         event: props.event
         });
     }
- 
+
     onMapClicked = (props) => {
         if (this.state.showingInfoWindow) {
-        this.setState({
-            showingInfoWindow: false,
-            activeMarker: null
-        })
+            this.setState({
+                showingInfoWindow: false,
+                activeMarker: null
+            })
         }
     };
 
@@ -43,47 +42,48 @@ class GoogleMap extends Component {
     makeFavorite = async (pin) => {
         console.log('make fav')
         const favorite = await request.post('https://guarded-lake-55222.herokuapp.com/api/me/favorites', this.state.event)
-        .set('Authorization', JSON.parse(localStorage.getItem('user')).token)
+            .set('Authorization', JSON.parse(localStorage.getItem('user')).token)
 
     }
-
 
     render() {
         const style = {
             border: '5px solid black',
             width: '70%',
             height: '70%',
-            margin: 'auto'
-
+            margin: 'auto',
+            top: '20%'
         }
 
         return (
-            <div>
-                 <Map  onClick={this.onMapClicked} 
-                       google={this.props.google} 
-                       zoom={3} 
-                       style ={style} 
-                       initialCenter={{lat: 45.5051, lng: -122.675}}>
+            <div className="map">
+                <Map onClick={this.onMapClicked}
+                    google={this.props.google}
+                    zoom={3}
+                    style={style}
+                    initialCenter={{ lat: 45.5051, lng: -122.675 }}>
 
-                    { 
+                    {
                         this.props.allEvents.map(event => (
 
-                            <Marker onClick={this.onMarkerClick} 
-                                    event={event}
-                                    title={event.title} 
-                                    // name={'WIll'} 
-                                    position={{lat: event.geometries[0].coordinates[1], lng: event.geometries[0].coordinates[0]}} 
-                                    icon={{ url: "/wildfire.png",  scaledSize: new window.google.maps.Size(50, 50)
-                            }}/>
-                           
+                            <Marker onClick={this.onMarkerClick}
+                                event={event}
+                                title={event.title}
+                                // name={'WIll'} 
+                                position={{ lat: event.geometries[0].coordinates[1], lng: event.geometries[0].coordinates[0] }}
+                                icon={{
+                                    url: "/wildfire.png", scaledSize: new window.google.maps.Size(50, 50)
+                                }} />
+
                         ))
 
                     }
-                    <InfoWindow 
+                    <InfoWindow
                         onClose={this.onInfoWindowClose}
                         marker={this.state.activeMarker}
                         visible={this.state.showingInfoWindow}>
                         <div>
+
 
                        <button onClick={this.makeFavorite} >Add to Mavorites</button>
                        
@@ -91,10 +91,12 @@ class GoogleMap extends Component {
                             <h5>DATE: {this.state.selectedPlace.date}</h5>
                             <h5>LATITUDE: {this.state.selectedPlace.lat}</h5>
                             <h5>LONGITUDE: {this.state.selectedPlace.lng}</h5>
-                            {/* <h4>{this.state.selectedAddInfo.name}</h4> */}
+    
+                            
 
+                          
                         </div>
-                        
+
                     </InfoWindow>
 
                 </Map>
@@ -105,4 +107,4 @@ class GoogleMap extends Component {
 
 export default GoogleApiWrapper({
     apiKey: process.env.REACT_APP_GOOGLE_KEY
-  })(GoogleMap)
+})(GoogleMap)

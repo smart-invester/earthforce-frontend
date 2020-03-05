@@ -40,7 +40,7 @@ export default class Search extends Component {
 
     render() {
         return (
-            <div>
+            <div className="search-container">
                 <form id="search">
                     <select onChange= {this.handleSelect}id="events" name="events">
                         <option value='8'>Wildfire</option>
