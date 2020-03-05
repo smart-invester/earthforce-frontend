@@ -13,6 +13,7 @@ export default class About extends Component {
                 <p>Earth-Force development is led by a small dedicated team working full time at Alchemy Code Lab.</p>
                 <p>Team members worked full time for one week utilizing React components and third-party APIs.</p> 
                 <p>The team compiled and utilized NASA and Google Maps APIs to create Earth-Force's application.</p>
+
                 <p>Current members of the Earth-Force team are listed in alphabetical order below.</p>
 
                     <div className="team-container">
