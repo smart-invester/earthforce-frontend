@@ -39,13 +39,13 @@ class GoogleMap extends Component {
     };
 
 
-    makeFavorite = async (pin) => {
+    makeFavorite = async (props) => {
         console.log('make fav')
-        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com/api/me/favorites', this.state.event)
-            .set('Authorization', JSON.parse(localStorage.getItem('user')).token)
-
+        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com/api/me/favorites', this.state.event )
+        .set('Authorization', JSON.parse(localStorage.getItem('user')).token)
+        
     }
-
+    
     render() {
         const style = {
             border: '5px solid black',
@@ -64,12 +64,12 @@ class GoogleMap extends Component {
                     initialCenter={{ lat: 45.5051, lng: -122.675 }}>
 
                     {
-                        this.props.allEvents.map(event => (
+                        this.props.allEvents.map((event, index) => (
 
                             <Marker onClick={this.onMarkerClick}
                                 event={event}
                                 title={event.title}
-                                // name={'WIll'} 
+                                key={index} 
                                 position={{ lat: event.geometries[0].coordinates[1], lng: event.geometries[0].coordinates[0] }}
                                 icon={{
                                     url: "/wildfire.png", scaledSize: new window.google.maps.Size(50, 50)

@@ -31,10 +31,7 @@ export default class Search extends Component {
     }
 
     makeFavorite = async (pin) => {
-        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com//api/me/favorites', {
-            name: pin.name
-
-        })
+        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com//api/me/favorites', this.state.event )
         .set('Authorization', this.props.user.token)
     }
 
