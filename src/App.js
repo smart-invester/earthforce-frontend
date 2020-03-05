@@ -12,19 +12,27 @@ import Header from './Header.js';
 
 
 export default class App extends Component {
+  
+  state = { user: null };
+    setUser = user => {
+      this.setState({user: user.body});
+    }
+
   render() {
     return (
       <div>
         <Router>
 
-          <Header />
+       <Header />
+        
+        <Switch>
+          <Route exact path='/' render={(props) => <Home {...props} setUser={ this.setUser } user={ this.state.user }/>}/>
+          <Route exact path='/about' component={About} />
+          <Route exact path='/search' render={(props) => <Search {...props} setUser={ this.setUser } user={ this.state.user }/>} />
+          {/* <Route exact path='/login' render={(props) => <Login {...props} setUser={ this.setUser } user={ this.state.user }/>} /> */}
+        </Switch>
+      </Router>
 
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/about' component={About} />
-            <Route exact path='/search' component={Search} />
-          </Switch>
-        </Router>
       </div>
     )
   }
