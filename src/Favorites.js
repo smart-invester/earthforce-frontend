@@ -36,7 +36,7 @@ export default class Favorites extends Component {
                 {
                     this.state.faves.map(fave =>
                     <div className="fave-card-div">    
-                        <img src='./hazard_160.png' alt =""/>
+                        <img src='' alt =""/>
                         <h4>{fave.title}</h4>
                         <p>{fave.date}</p>
                     </div>
