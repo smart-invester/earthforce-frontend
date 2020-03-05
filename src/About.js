@@ -10,10 +10,8 @@ export default class About extends Component {
             <div className="about-container">
 
                 <h1>ABOUT OUR TEAM</h1>
-                <p>Earth-Force development is led by a small dedicated team working full time at Alchemy Code Lab.</p>
-                <p>Team members worked full time for one week utilizing React components and third-party APIs.</p> 
-                <p>The team compiled and utilized NASA and Google Maps APIs to create Earth-Force's application.</p>
-                <p>Current members of the Earth-Force team are listed in alphabetical order below.</p>
+                <p>Earth-Force development is led by a small dedicated team working full time at Alchemy Code Lab. Team members worked full time for one week utilizing framework from React.js, Node.js and third-party APIs. The team compiled and utilized NASA and Google Maps APIs to create Earth-Force's application.</p>
+                <h3>Members of the Earth-Force team are listed in alphabetical order below.</h3>
 
                     <div className="team-container">
 
