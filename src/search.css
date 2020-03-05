@@ -1,3 +1,17 @@
-* {
+/* * {
     z-index: 20;
+} */
+
+#search {
+    top: 10%;
+    left: 45%;
+    position: absolute;
+    z-index: 53;
+
+}
+
+select option {
+    opacity: .2;
+    color: #0088a9;
+    text-transform: capitalize;
 }
