@@ -43,8 +43,12 @@ class GoogleMap extends Component {
 
 
     makeFavorite = async (props) => {
-        console.log('make fav')
-        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com/api/me/favorites', this.state.event )
+        console.log('------hi :P', this.state.event)
+        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com/api/me/favorites',{
+            title: this.state.event.title,
+            date: this.state.event.geometries[0].date
+
+        } )
         .set('Authorization', this.props.user.token)
         
     }
