@@ -16,10 +16,16 @@ class GoogleMap extends Component {
     onMarkerClick = (props, marker, e) => {
         console.log(props)
         this.setState({
-            selectedPlace: { name: props.event.title },
-            activeMarker: marker,
-            showingInfoWindow: true,
-            event: props.event
+        selectedPlace: {name: 
+            props.event.title,
+            date: props.event.geometries[0].date,
+            lat: props.event.geometries[0].coordinates[1],
+            lng: props.event.geometries[0].coordinates[0]
+        },
+        
+        activeMarker: marker,
+        showingInfoWindow: true,
+        event: props.event
         });
     }
 
@@ -39,7 +45,6 @@ class GoogleMap extends Component {
             .set('Authorization', JSON.parse(localStorage.getItem('user')).token)
 
     }
-
 
     render() {
         const style = {
@@ -79,10 +84,17 @@ class GoogleMap extends Component {
                         visible={this.state.showingInfoWindow}>
                         <div>
 
-                            <button onClick={this.makeFavorite} >Add to Mavorites</button>
 
-                            <h5>{this.state.selectedPlace.name}</h5>
+                       <button onClick={this.makeFavorite} >Add to Mavorites</button>
+                       
+                            <h5>NAME: {this.state.selectedPlace.name}</h5>
+                            <h5>DATE: {this.state.selectedPlace.date}</h5>
+                            <h5>LATITUDE: {this.state.selectedPlace.lat}</h5>
+                            <h5>LONGITUDE: {this.state.selectedPlace.lng}</h5>
+    
+                            
 
+                          
                         </div>
 
                     </InfoWindow>
