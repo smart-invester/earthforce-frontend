@@ -16,7 +16,7 @@ export default class Home extends Component {
             password: this.state.passwordSignUp,
             
         })
-
+        this.props.setUser(signUp);
         localStorage.setItem('user', JSON.stringify(signUp.body));
         // this redirects the user after sign up
         this.props.history.push('/search');
