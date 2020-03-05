@@ -13,7 +13,7 @@ video#bgvideo {
   /* Add some content at the bottom of the video/page */
   .content {
     position: fixed;
-    bottom: 40%;
+    bottom: 30%;
     left: 25%;
     right: 25%;
     color: #F1F1F1;
