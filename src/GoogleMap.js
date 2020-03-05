@@ -10,13 +10,20 @@ class GoogleMap extends Component {
     state = {
         showInfoWindow: false,
         activeMarker: {},
-        selectedPlace: {}, 
+        selectedPlace: {},
+        // selectedAddInfo: {}, 
     }
 
     onMarkerClick = (props, marker, e) => {
         console.log(props)
         this.setState({
-        selectedPlace: {name: props.event.title},
+        selectedPlace: {name: 
+            props.event.title,
+            date: props.event.geometries[0].date,
+            lat: props.event.geometries[0].coordinates[1],
+            lng: props.event.geometries[0].coordinates[0]
+        },
+        // selectedAddInfo: {name: props.event.geometries},
         activeMarker: marker,
         showingInfoWindow: true,
         event: props.event
@@ -80,7 +87,11 @@ class GoogleMap extends Component {
 
                        <button onClick={this.makeFavorite} >Add to Mavorites</button>
                        
-                            <h5>{this.state.selectedPlace.name}</h5>
+                            <h5>NAME: {this.state.selectedPlace.name}</h5>
+                            <h5>DATE: {this.state.selectedPlace.date}</h5>
+                            <h5>LATITUDE: {this.state.selectedPlace.lat}</h5>
+                            <h5>LONGITUDE: {this.state.selectedPlace.lng}</h5>
+                            {/* <h4>{this.state.selectedAddInfo.name}</h4> */}
 
                         </div>
                         
