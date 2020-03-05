@@ -49,5 +49,9 @@ h3 {
     color: #ccc7c7;
     font-family: "Montserrat", sans-serif;
 }
-
+.nav {
+    color: white;
+    text-decoration: none;
+    margin: 50px;
+}
 
