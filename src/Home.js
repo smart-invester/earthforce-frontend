@@ -16,7 +16,7 @@ export default class Home extends Component {
             password: this.state.passwordSignUp,
             
         })
-
+        this.props.setUser(signUp);
         localStorage.setItem('user', JSON.stringify(signUp.body));
         // this redirects the user after sign up
         this.props.history.push('/search');
@@ -43,9 +43,9 @@ export default class Home extends Component {
                 <h3>Outreach empowers you to create positive change for people and the planet with Geo tools.</h3>
                 
                 <div className="signup">
-                Username
+                Username:
                 <input value={ this.state.usernameSignUp} onChange={(e) => this.setState({ usernameSignUp: e.target.value})} />
-                Password
+                Password:
                 <input value={ this.state.passwordSignUp} type="password" onChange={(e) => this.setState({ passwordSignUp: e.target.value})} />
                 <button onClick={ this.handleSignUp }>Sign up</button>
 

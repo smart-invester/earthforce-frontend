@@ -12,6 +12,10 @@ export default class Search extends Component {
         select: 8,
         allEvents: []
     }
+    // componentDidMount(){
+    //     const user = JSON.parse(localStorage.getItem('user'));
+
+    // }
 
     handleSelect = (e) => {
         this.setState({ select: e.target.value })
@@ -31,8 +35,9 @@ export default class Search extends Component {
     }
 
     makeFavorite = async (pin) => {
+        const user = JSON.parse(localStorage.getItem('user'));
         const favorite = await request.post('https://guarded-lake-55222.herokuapp.com//api/me/favorites', this.state.event )
-        .set('Authorization', this.props.user.token)
+        .set('Authorization', user.token)
     }
 
     render() {
@@ -58,7 +63,7 @@ export default class Search extends Component {
                 </form>  
                 <div>
                     {this.state.allEvents && <GoogleMap coordinates={this.state.coordinates}
-                    allEvents={this.state.allEvents}/>}
+                    allEvents={this.state.allEvents} user={this.props.user} />}
                 </div>
             </div>
         )
