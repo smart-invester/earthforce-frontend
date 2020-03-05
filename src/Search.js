@@ -58,7 +58,7 @@ export default class Search extends Component {
                 </form>  
                 <div>
                     {this.state.allEvents && <GoogleMap coordinates={this.state.coordinates}
-                    allEvents={this.state.allEvents}/>}
+                    allEvents={this.state.allEvents} user={this.props.user} />}
                 </div>
             </div>
         )
