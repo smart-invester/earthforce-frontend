@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    z-index: 50;
+    /* z-index: 50; */
 }
 
 li, a, button {
@@ -21,7 +21,10 @@ li, a, button {
     align-items: center;
     padding: 40px 10%;
     position: fixed;
-    bottom: 70%;
+    height: 900px;
+    bottom: 62%;
+    z-index: 52;
+    left: 6%;
 }
 
 .logo {
@@ -48,6 +51,10 @@ li, a, button {
 }
 
 .nav__links li a:hover {
+    color: #0088a9;
+}
+
+.nav__links a:active {
     color: #0088a9;
 }
 

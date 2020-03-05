@@ -41,9 +41,9 @@ export default class Search extends Component {
     render() {
         return (
             <div>
-                <form>
+                <form id="search">
                     <select onChange= {this.handleSelect}id="events" name="events">
-                        <option value='8'>wildfire</option>
+                        <option value='8'>Wildfire</option>
                         <option value='10'>storm</option>
                         <option value='12'>volcanoes</option>
                         <option value='6'>drought</option>
