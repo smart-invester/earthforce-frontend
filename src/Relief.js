@@ -10,16 +10,17 @@ export default class About extends Component {
             <div className="about-container">
 
                 <h1>Disaster Relief Agencies</h1>
-                <p>Earth-Force development is led by a small dedicated team working full time at Alchemy Code Lab.</p>
-                <p>Team members worked full time for one week utilizing React components and third-party APIs.</p>
-                <p>The team compiled and utilized NASA and Google Maps APIs to create Earth-Force's application.</p>
-                <p>Current members of the Earth-Force team are listed in alphabetical order below.</p>
+                <p>Are you currently tracking a natural event with Earth-Force?</p>
+                <p>Are you concerned about Climate Chanage and environmental degradation?</p>
+                <p>The organizations below are dedicated to helping with with disaster relief, environmental protection and awareness.</p>
+                
+              
 
                 <div className="team-container">
 
                     <div className="photo">
-                        <h2>Angela</h2>
-                        <img src='Angela.jpeg' alt="Angela" />
+                        <h2>Americares</h2>
+                        <img src='Americares.jpg' alt="Americares" />
                         <div className="socialicons">
                             <a href="https://www.linkedin.com/in/ziyizhao19/" className="Linkedin social" >
                                 <FontAwesomeIcon icon={faLinkedin} size="2x" /> </a>
@@ -29,8 +30,8 @@ export default class About extends Component {
                     </div>
 
                     <div className="photo">
-                        <h2>Eli</h2>
-                        <img src='Eli.jpeg' alt="Eli" />
+                        <h2>Direct Leaf</h2>
+                        <img src='Direct_Leaf.png' alt="Direc Leaf" />
 
                         <div className="socialicons">
                             <a href="https://www.linkedin.com/in/eli-zevin/" className="Linkedin social" >
@@ -41,8 +42,8 @@ export default class About extends Component {
                     </div>
 
                     <div className="photo">
-                        <h2>Kyle</h2>
-                        <img src='Kyle.jpeg' alt="Kyle" />
+                        <h2>The Coalition for Rainforest Nations</h2>
+                        <img src='rainforest.png' alt="The Colaition for Rainforest Nations" />
 
                         <div className="socialicons">
                             <a href="https://www.linkedin.com/in/kyleadevine/" className="Linkedin social">
@@ -54,8 +55,8 @@ export default class About extends Component {
                     <div className="about-us-container-two">
 
                         <div className="photo">
-                            <h2>Nick</h2>
-                            <img src='Nick.jpeg' alt="Nick" /></div>
+                            <h2>Clean Air Task Force</h2>
+                            <img src='clear_air_task_force.jpeg' alt="Clean Air Task Force" /></div>
                         <div className="socialicons">
                             <a href="https://www.linkedin.com/in/nicholas-roberto/" className="Linkedin social" >
                                 <FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
@@ -65,8 +66,8 @@ export default class About extends Component {
                     </div>
 
                     <div className="photo">
-                        <h2>Rosalie</h2>
-                        <img src='Rosalie.jpeg' alt="Rosalie" />
+                        <h2>Rotary International</h2>
+                        <img src='Rotary.jpg' alt="Rotary International" />
 
                         <div className="socialicons">
                             <a href="https://www.linkedin.com/in/rosalielee/" className="Linkedin social">
@@ -78,8 +79,8 @@ export default class About extends Component {
 
 
                     <div className="photo">
-                        <h2>Will</h2>
-                        <img src='Will.jpeg' alt="Will" />
+                        <h2>United Nations Disaster Coordination</h2>
+                        <img src='United_Nations_Disaster_Coordination.png' alt="UN Disaster Coordination" />
                         <div className="socialicons">
                             <a href="https://www.linkedin.com/in/willpiro/" className="Linkedin social">
                                 <FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
