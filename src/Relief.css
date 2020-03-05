@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+h1 {
+    font-size: 64px;
+    font-family: 'Roboto', san-serif;
+    letter-spacing: .6em;
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: 'Roboto', san-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+p {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    opacity: .8;
+    line-height: 2em;
+    text-align: center;
+    
+ 
+}
+a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+    
+}
+a.linkednin {
+    color: #ffffff;
+} 
+a.github {
+    color: #ffffff;
+}
+a.social:hover {
+    transform: translateY(-2px);
+}
+.photo img {
+    display: inline;
+    height: 250px;
+    width: 250px;
+    box-shadow: 0 4px 26px #ffffff;
+    border-radius: 30%;
+    margin: 0 1rem;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+   
+}
+
+.about-container {
+    color: white;
+    position: fixed;
+    top: 20%;
+    left: 5%;    
+}
+
+.socialicons {
+    text-align: center;
+    margin-top: 20px;
+}
