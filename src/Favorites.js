@@ -36,9 +36,9 @@ export default class Favorites extends Component {
                 {
                     this.state.faves.map(fave =>
                         <div className="fave-card-div">
-                            {/* <p>{fave.date}</p> */}
                             <img id="disasterimg" src='Disaster Icon.svg' alt="disaster icon" />
                             <h3 id="disastertitle">{fave.title}</h3>
+                            <p id="date">Date: {fave.date.substring(0,10)}</p>
                             <button onClick={() => this.handleDelete(fave.id)}>Remove Event</button>
                         </div>
 

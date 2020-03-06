@@ -21,7 +21,7 @@ class GoogleMap extends Component {
         this.setState({
         selectedPlace: {name: 
             props.event.title,
-            date: props.event.geometries[0].date,
+            date: props.event.geometries[0].date.substring(0,10),
             lat: props.event.geometries[0].coordinates[1],
             lng: props.event.geometries[0].coordinates[0]
         },
