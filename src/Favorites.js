@@ -30,7 +30,6 @@ export default class Favorites extends Component {
 
         return (
             <div>
-            {/* <h1 id="events">YOUR EVENTS</h1> */}
                 
             <div className="faves-container">
                 {
@@ -44,10 +43,7 @@ export default class Favorites extends Component {
 
                     )
                 }
-
-                {/* <h4> {this.state.faves.title} </h4> */}
-                <p></p>
-
+                
             </div>
             </div>
         )

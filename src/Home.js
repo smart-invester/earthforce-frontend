@@ -28,7 +28,7 @@ export default class Home extends Component {
             <div>
                 <Player>
                <video id="bgvideo" loop autoPlay muted>
-                 {/* <source src="https://ak6.picdn.net/shutterstock/videos/1036814996/preview/stock-footage-amazon-rainforest-fire-from-space-satellite-view-shows-a-lot-of-fires-burning-in-the-brazilian.webm" type="video/mp4" /> */}
+          
                  <source src="https://isorepublic.com/wp-content/uploads/2019/01/iso-republic-free-video-089.mp4" type="video/mp4" />
                  <source src="https://isorepublic.com/wp-content/uploads/2019/01/iso-republic-free-video-089.mp4" type="video/ogg" />
 
