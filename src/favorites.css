@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 
 .faves-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 75%;
-    color: aquamarine;
+    width: 100%;
+    color: #0088a9;
     text-align: center;
     margin: 10% auto 0 auto;
     
@@ -12,9 +14,27 @@
 .fave-card-div{
     margin: 10px;
     display: inline-block;
-    border: 1px solid green;
-    width: 200px;
+    width: 500px;
+    font-family: 'Roboto', sans-serif;
 }
 
+#disasterimg {
+    margin-bottom: -30px;
+    border-radius: 50%;
+}
 
+#disastertitle {
+    margin-bottom: 20px;
+    padding-top: 50px;
+    font-size: 20px;
+    line-height: 1.3em;
+}
 
+/* h1 {
+    font-size: 64px;
+    font-family: 'Roboto', san-serif;
+    letter-spacing: .6em;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+} */

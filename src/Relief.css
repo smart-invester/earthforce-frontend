@@ -1,41 +1,56 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-.DisasterTitle {
-    margin-bottom: 90px;
-    margin-top: 50px;
-}
-
-.title-container{
-    margin-top: 20px;
-    margin-bottom: 100px;
-    font-size: 64px;
-    font-family:'Roboto', san-serif;
-}
-
 h1 {
     font-size: 64px;
     font-family: 'Roboto', san-serif;
     letter-spacing: .6em;
     text-align: center;
-    margin-top: -30px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 20px;
+.company {
+    font-size: 18px;
     font-family: 'Roboto', san-serif;
     text-align: center;
     margin-bottom: 10px;
-    margin-right: 20px;
+    margin-right: -10px;
 }
+
+.img-relief:hover {
+    opacity: 0.9;
+}
+
 p {
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    opacity: .8;
+    line-height: 1.75em;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;  
+}
+.Members {
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    opacity: .8;
+    line-height: 1.75em;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: 15%;
+    margin-right: 15%;  
+    font-style: italic;
+}
+h3 {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     opacity: .8;
     line-height: 2em;
     text-align: center;
-    
- 
+    margin-bottom: 50px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
 }
 a.social {
     margin: 0 1rem;
@@ -45,41 +60,50 @@ a.social {
 }
 a.linkednin {
     color: #ffffff;
-} 
+}
+
 a.github {
     color: #ffffff;
 }
 a.social:hover {
     transform: translateY(-2px);
-}
+    color: #0088a9;
+} 
 
-.img-relief {
-    margin: 10 0;
-}
 .photo img {
     display: inline;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     box-shadow: 0 4px 26px #ffffff;
-    border-radius: 30%;
+    border-radius: 50%;
     margin: 0 1rem;
+    
 }
 
 .team-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 40px;
-   
+    margin-top: 20px;
+    width: 100%;
 }
 
 .about-container {
     color: white;
+    height: auto;
     position: fixed;
-    top: 34%;
-    left: 26%;    
+    top: 40%;
+    left: 0%;  
+    width: 100%;
 }
 
 .socialicons {
     text-align: center;
     margin-top: 20px;
+}
+
+.flex-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

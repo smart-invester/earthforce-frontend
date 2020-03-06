@@ -57,9 +57,9 @@ class GoogleMap extends Component {
         const style = {
             border: '2px solid black',
             width: '80%',
-            height: '70%',
+            height: '66%',
             margin: 'auto',
-            top: '20%'
+            top: '28%'
         }
 
         return (
