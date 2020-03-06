@@ -64,8 +64,8 @@ a.social:hover {
 }
 .photo img {
     display: inline;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     box-shadow: 0 4px 26px #ffffff;
     border-radius: 50%;
     margin: 0 1rem;
@@ -75,15 +75,17 @@ a.social:hover {
 .team-container {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 70px;
-   
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
 }
 
 .about-container {
     color: white;
-    position: fixed;
-    top: 20%;
-    left: 0%;    
+    height: auto;
+    top: 14%;
+    left: 0%;  
+    width: 100%;
 }
 
 .socialicons {

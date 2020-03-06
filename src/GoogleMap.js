@@ -21,7 +21,7 @@ class GoogleMap extends Component {
         this.setState({
         selectedPlace: {name: 
             props.event.title,
-            date: props.event.geometries[0].date,
+            date: props.event.geometries[0].date.substring(0,10),
             lat: props.event.geometries[0].coordinates[1],
             lng: props.event.geometries[0].coordinates[0]
         },
@@ -57,9 +57,9 @@ class GoogleMap extends Component {
         const style = {
             border: '2px solid black',
             width: '80%',
-            height: '70%',
+            height: '66%',
             margin: 'auto',
-            top: '20%'
+            top: '28%'
         }
 
         return (
