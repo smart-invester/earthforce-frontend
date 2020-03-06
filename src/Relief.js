@@ -21,7 +21,7 @@ export default class Relief extends Component {
 
                     <div className="photo">
                         
-                        <img className='img-relief' src='Americares.jpg' alt="Americares" />
+                    <a href="https://www.americares.org/" className="Linkedin social"><img className='img-relief' src='Americares.jpg' alt="Americares" /></a>
                         <div className="socialicons">
                         <h2 className="company">Americares</h2>
                             <a href="https://www.americares.org/" className="Linkedin social">americares.org</a>
@@ -29,7 +29,7 @@ export default class Relief extends Component {
                     </div>
 
                     <div className="photo">
-                        <img className='img-relief' src='Direct_Leaf.png' alt="Direc Leaf" />
+                    <a href="https://www.directrelief.org/" className="Linkedin social"><img className='img-relief' src='Direct_Leaf.png' alt="Direc Leaf" /></a>
 
                         <div className="socialicons">
                         <h2 className="company">Direct Leaf</h2>
@@ -38,7 +38,7 @@ export default class Relief extends Component {
                     </div>
 
                     <div className="photo">
-                        <img className='img-relief' src='rainforest.png' alt="The Colaition for Rainforest Nations" />
+                    <a href="https://www.rainforestcoalition.org/" className="Linkedin social"><img className='img-relief' src='rainforest.png' alt="The Colaition for Rainforest Nations" /></a>
                         <div className="socialicons">
                         <h2 className="company">Coalition for Rainforest Nations</h2>
                             <a href="https://www.rainforestcoalition.org/" className="Linkedin social">rainforestcoalition.org</a>
@@ -47,7 +47,8 @@ export default class Relief extends Component {
                     <div className="about-us-container-two">
 
                         <div className="photo">
-                            <img className='img-relief' src='clear_air_task_force.jpeg' alt="Clean Air Task Force" /></div>
+                        <a href="https://www.catf.us/" className="Linkedin social" ><img className='img-relief' src='clear_air_task_force.jpeg' alt="Clean Air Task Force" /></a>
+                        </div>
                         <div className="socialicons">
                             <h2 className="company">Clean Air Task Force</h2>
                             <a href="https://www.catf.us/" className="Linkedin social" >catf.us</a>
@@ -55,7 +56,7 @@ export default class Relief extends Component {
                     </div>
 
                     <div className="photo">
-                        <img className='img-relief' src='Rotary.jpg' alt="Rotary International" />
+                    <a href="https://www.rotary.org/en/rotary-helps-disaster-victims" className="Linkedin social"><img className='img-relief' src='Rotary.jpg' alt="Rotary International" /></a>
 
                         <div className="socialicons">
                         <h2 className="company">Rotary International</h2>
@@ -65,7 +66,7 @@ export default class Relief extends Component {
 
 
                     <div className="photo">
-                        <img className='img-relief' src='United_Nations_Disaster_Coordination.png' alt="UN Disaster Coordination" />
+                    <a href="https://www.unocha.org/our-work/coordination/un-disaster-assessment-and-coordination-undac" className="Linkedin social"><img className='img-relief' src='United_Nations_Disaster_Coordination.png' alt="UN Disaster Coordination" /></a>
                         <div className="socialicons">
                         <h2 className="company">UNDC</h2>
                             <a href="https://www.unocha.org/our-work/coordination/un-disaster-assessment-and-coordination-undac" className="Linkedin social">unocha.org</a>
