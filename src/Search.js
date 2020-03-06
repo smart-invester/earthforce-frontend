@@ -4,40 +4,24 @@ import request from 'superagent';
 import './search.css';
 import './header.css';
 
+
 export default class Search extends Component {
     state = {
-        favorites: [],
-        input: '',
-        coordinates: [],
         select: 8,
         allEvents: []
     }
-    // componentDidMount(){
-    //     const user = JSON.parse(localStorage.getItem('user'));
-
-    // }
-
     handleSelect = (e) => {
         this.setState({ select: e.target.value })
     }
-
     handleSearch = async (e) => {
         e.preventDefault();
         const data = await request.get(`https://guarded-lake-55222.herokuapp.com/api/categories/${this.state.select}`)
-        //Map through events and return an array of geometries.  
-        const coordinates = data.body.events.map(event => {
-            return event.geometries[0].coordinates
-        })
         this.setState({
-            coordinates: coordinates,
             allEvents: data.body.events,
         });
     }
-
-
     render() {
         return (
-
             <div className="search-container">
                 <h3 id="searchtitle">Use the drop down menu to explore natural disasters across the globe. Select an event and choose events to follow.</h3>
                 <form id="search">
@@ -59,8 +43,7 @@ export default class Search extends Component {
                     <button onClick={this.handleSearch}>Search!</button>
                 </form>
                 <div>
-                    {this.state.allEvents && <GoogleMap coordinates={this.state.coordinates}
-                        allEvents={this.state.allEvents} user={this.props.user} />}
+                    {this.state.allEvents && <GoogleMap allEvents={this.state.allEvents} user={this.props.user} />}
                 </div>
             </div>
         )
