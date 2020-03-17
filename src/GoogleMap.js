@@ -21,6 +21,7 @@ class GoogleMap extends Component {
         this.setState({
         selectedPlace: {name: 
             props.event.title,
+            // drilling this deep into properties seems risky! might want to do some sanity checking to make sure you don't drill into an undefined property
             date: props.event.geometries[0].date.substring(0,10),
             lat: props.event.geometries[0].coordinates[1],
             lng: props.event.geometries[0].coordinates[0]
@@ -33,6 +34,7 @@ class GoogleMap extends Component {
     }
 
     onMapClicked = (props) => {
+        // elegant piece of logic
         if (this.state.showingInfoWindow) {
             this.setState({
                 showingInfoWindow: false,

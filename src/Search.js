@@ -26,6 +26,7 @@ export default class Search extends Component {
                 <h3 id="searchtitle">Use the drop down menu to explore natural disasters across the globe. Select an event and choose events to follow.</h3>
                 <form id="search">
                     <select onChange={this.handleSelect} id="events" name="events">
+                    // would have liked to see these stored as an array of objects to map over and render these options
                         <option value='8'>Wildfire</option>
                         <option value='10'>Storm</option>
                         <option value='12'>Volcanoes</option>

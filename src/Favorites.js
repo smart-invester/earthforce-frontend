@@ -18,6 +18,7 @@ export default class Favorites extends Component {
 
     handleDelete = async (id) => {
         const user = JSON.parse(localStorage.getItem('user'));
+        // seems like your API calls should live in a separate file to prevent so much copying and pasting
         await request.delete(`https://guarded-lake-55222.herokuapp.com/api/me/favorites/${id}`).set('Authorization', user.token);
         const faves = await request.get(`https://guarded-lake-55222.herokuapp.com/api/me/favorites`).set('Authorization', user.token);
         this.setState({ faves: faves.body })

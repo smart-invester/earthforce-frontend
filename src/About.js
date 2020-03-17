@@ -13,7 +13,7 @@ export default class About extends Component {
 
                 <p>Earth-Force development is led by a small dedicated team working full time at Alchemy Code Lab. Team members worked full time for one week utilizing framework from React.js, Node.js and third-party APIs. The team compiled and utilized NASA and Google Maps APIs to create Earth-Force's application.</p>
 
-
+            // this data should live in json and be iterater over to generate these divs
                 <div className="team-container">
 
                     <div className="photo">
