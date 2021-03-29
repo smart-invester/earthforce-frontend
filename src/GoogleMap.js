@@ -39,13 +39,6 @@ class GoogleMap extends Component {
             })
         }
     };
-
-
-    makeFavorite = async (props) => {
-        const user = JSON.parse(localStorage.getItem('user'))
-            .set('Authorization', user.token)
-        
-    }
     
     render() {
         const style = {
