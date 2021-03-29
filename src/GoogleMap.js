@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import InfoWindow from './InfoWindowEx.js';
 import './App.css';
-import request from 'superagent';
 require('dotenv').config();
 
 
@@ -43,13 +42,8 @@ class GoogleMap extends Component {
 
 
     makeFavorite = async (props) => {
-        const user = JSON.parse(localStorage.getItem('user'));
-        const favorite = await request.post('https://guarded-lake-55222.herokuapp.com/api/me/favorites',{
-            title: this.state.event.title,
-            date: this.state.event.geometries[0].date
-
-        } )
-        .set('Authorization', user.token)
+        const user = JSON.parse(localStorage.getItem('user'))
+            .set('Authorization', user.token)
         
     }
     
