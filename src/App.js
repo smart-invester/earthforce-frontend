@@ -27,7 +27,7 @@ export default class App extends Component {
        <Header />
         
         <Switch>
-          
+          // nice prop passing!
           <Route exact path='/' render={(props) => <Home {...props} setUser={ this.setUser } user={ this.state.user }/>}/>
           <Route exact path='/about' component={About} />
           <Route exact path='/relief' component={Relief} />

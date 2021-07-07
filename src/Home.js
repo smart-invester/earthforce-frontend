@@ -19,6 +19,7 @@ export default class Home extends Component {
         this.props.setUser(signUp);
         localStorage.setItem('user', JSON.stringify(signUp.body));
         // this redirects the user after sign up
+        // nice use of react router props!
         this.props.history.push('/search');
         
     }

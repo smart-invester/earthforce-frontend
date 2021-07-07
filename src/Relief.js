@@ -17,8 +17,9 @@ export default class Relief extends Component {
                 <div className="flex-container">
                 <div className="team-container">
 
+                    // would have liked to see these rendered dynamically from json, and rendered as react components
+                    { charities.map(charity => <CharityItem charity={charity} />)}
                     <div className="photo">
-                        
                     <a href="https://www.americares.org/" className="Linkedin social"><img className='img-relief' src='Americares.jpg' alt="Americares" /></a>
                         <div className="socialicons">
                         <h2 className="company">Americares</h2>

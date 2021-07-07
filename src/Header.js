@@ -36,7 +36,18 @@ export default class Header extends Component {
           </ul>
         </div>
 
-        <div id="login">Username: <input value={this.state.usernameSignIn} onChange={(e) => this.setState({ usernameSignIn: e.target.value })} />Password: <input value={this.state.passwordSignIn} type="password" onChange={(e) => this.setState({ passwordSignIn: e.target.value })} /><span><button onClick={this.handleSignIn}>Sign in</button></span>
+        // there's a lot going on without enough newlines here
+        <div id="login">Username: 
+            <input value={this.state.usernameSignIn} 
+                onChange={(e) => this.setState({ usernameSignIn: e.target.value })} />
+                Password: 
+                <input 
+                    value={this.state.passwordSignIn} 
+                    ype="password" 
+                    onChange={(e) => this.setState({ passwordSignIn: e.target.value })} />
+                <span>
+                    <button onClick={this.handleSignIn}>Sign in</button>
+                </span>
         </div>
 
       </div>
